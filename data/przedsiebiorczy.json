@@ -1,0 +1,14 @@
+{
+    "hotelarz": {
+        "course": "Technik hotelarstwa",
+        "school": "Technikum nr 1 | ZS2 Korfanty",
+        "link": "https://www.zs2.jastrzebie.pl/kierunki/technikum/technik-hotelarstwa",
+        "technikum": "true"
+    },
+    "turystyka": {
+        "course": "Technik organizacji turystyki",
+        "school": "Technikum nr 1 | ZS2 Korfanty",
+        "link": "https://www.zs2.jastrzebie.pl/kierunki/technikum/technik-organizacji-turystyki",
+        "technikum": "true"
+    }
+}

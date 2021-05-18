@@ -1,0 +1,74 @@
+{
+    "mechanik-lotniczy": {
+        "course": "Technik mechanik lotniczy",
+        "school": "Technikum nr 1 | ZS2 Korfanty",
+        "link": "http://zs2.jastrzebie.pl/technikum-2/technik-mechanik-lotniczy",
+        "technikum": "true"
+    },
+    "mechanik": {
+        "course": "Technik mechanik",
+        "school": "Technikum nr 2 | ZS5 im. Jana Pawła II",
+        "link": "http://www.zs5.jastrzebie.pl/",
+        "technikum": "true"
+    },
+    "elektryk": {
+        "course": "Technik elektryk",
+        "school": "Technikum nr 4 | ZS6 Sobieski",
+        "link": "https://zs6sobieski.pl/rekrutacja/rekrutacja-technikum-nr-4/technikum-nr-4-profile-zawodow/technik-elektryk/",
+        "technikum": "true"
+    },
+    "gornik": {
+        "course": "Technik Górnik",
+        "school": "Technikum nr 4 | ZS6 Sobieski",
+        "link": "https://zs6sobieski.pl/rekrutacja/rekrutacja-technikum-nr-4/technikum-nr-4-profile-zawodow/technik-gornictwa-podziemnego/",
+        "technikum": "true"
+    },
+    "budowniczy": {
+        "course": "Technik budownictwa",
+        "school": "Technikum nr 5 | ZSZ",
+        "link": "https://zsz.jastrzebie.pl/technikum-nr-5/technik-budownictwa/",
+        "technikum": "true"
+    },
+    "klimatyzator": {
+        "course": "Technik chłodnictwa i klimatyzacji",
+        "school": "Technikum nr 5 | ZSZ",
+        "link": "https://zsz.jastrzebie.pl/technikum-nr-5/technik-chlodnictwa-i-klimatyzacji/",
+        "technikum": "true"
+    },
+    "pojazd": {
+        "course": "Technik pojazdów samochodowych",
+        "school": "Technikum nr 5 | ZSZ",
+        "link": "https://zsz.jastrzebie.pl/technikum-nr-5/technik-pojazdow-samochodowych/",
+        "technikum": "true"
+    },
+    "energetyk": {
+        "course": "Technik urządzeń i systemów energetyki odnawialnej",
+        "school": "Technikum nr 5 | ZSZ",
+        "link": "https://zsz.jastrzebie.pl/technikum-nr-5/technik-urzadzen-i-i-systemow-energetyki-odnawialnej/",
+        "technikum": "true"
+    },
+    "obrabiarka": {
+        "course": "Operator obrabiarek skrawających",
+        "school": "Branżowa Szkoła I Stopnia nr 3 | ZSZ",
+        "link": "https://zsz.jastrzebie.pl/szkola-branzowa-i-stopnia/operator-obrabiarek-skrawajacych/",
+        "technikum": "false"
+    },
+    "tory": {
+        "course": "Monter nawierzchni kolejowej",
+        "school": "Branżowa Szkoła I Stopnia nr 3 | ZSZ",
+        "link": "https://zsz.jastrzebie.pl/szkola-branzowa-i-stopnia/monter-nawierzchni-kolejowej/",
+        "technikum": "false"
+    },
+    "elektromechanik": {
+        "course": "Elektromechanik pojazdów samochodowych",
+        "school": "Branżowa Szkoła I Stopnia nr 3 | ZSZ",
+        "link": "https://zsz.jastrzebie.pl/szkola-branzowa-i-stopnia/elektromechanik/",
+        "technikum": "false"
+    },
+    "mechanik2": {
+        "course": "Mechanik pojazdów samochodowych",
+        "school": "Branżowa Szkoła I Stopnia nr 3 | ZSZ",
+        "link": "https://zsz.jastrzebie.pl/szkola-branzowa-i-stopnia/mechanik-pojazdow-samochodowych/",
+        "technikum": "false"
+    }
+}

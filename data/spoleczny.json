@@ -1,0 +1,14 @@
+{
+    "gastro": {
+        "course": "Technik żywienia i usług gastronomicznych",
+        "school": "Technikum Nr 1 | ZS2 Korfanty",
+        "link": "https://www.zs2.jastrzebie.pl/kierunki/technikum/technik-zywienia-i-uslug-gastronomicznych",
+        "technikum": "true"
+    },
+    "kucharz": {
+        "course": "Kucharz",
+        "school": "Branżowa Szkoła I Stopnia Nr 1 | ZS2 Korfanty",
+        "link": "https://www.zs2.jastrzebie.pl/kierunki/branzowa-szkola-1-stopnia/klasa-biol-chem",
+        "technikum": "false"
+    }
+}

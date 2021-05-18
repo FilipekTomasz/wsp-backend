@@ -1,0 +1,26 @@
+{
+    "fryzjer": {
+        "course": "Technik usług fryzjerskich",
+        "school": "Technikum nr 5 | ZSZ",
+        "link": "https://zsz.jastrzebie.pl/technikum-nr-5/technik-uslug-fryzjerskich/",
+        "technikum": "true"
+    },
+    "krajobraz": {
+        "course": "Technik architektury krajobrazu",
+        "school": "Technikum Nr 1 | ZS2 Korfanty",
+        "link": "https://www.zs2.jastrzebie.pl/kierunki/technikum/technik-architektury-krajobrazu",
+        "technikum": "true"
+    },
+    "grafik": {
+        "course": "Technik grafiki i poligrafii cyfrowej",
+        "school": "Technikum Nr 1 | ZS2 Korfanty",
+        "link": "https://www.zs2.jastrzebie.pl/kierunki/technikum/technik-grafiki-i-poligrafii-cyfrowej",
+        "technikum": "true"
+    },
+    "fotograf": {
+        "course": "Technik fotografii",
+        "school": "Technikum Nr 1 | ZS2 Korfanty",
+        "link": "https://www.zs2.jastrzebie.pl/technikum-2/technik-fotografii-i-multimediow",
+        "technikum": "true"
+    }
+}

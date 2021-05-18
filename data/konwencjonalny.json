@@ -1,0 +1,56 @@
+{
+    "kurier": {
+        "course": "Technik logistyk",
+        "school": "Technikum nr 1 | ZS2 Korfanty",
+        "link": "https://www.zs2.jastrzebie.pl/kierunki/technikum/technik-logistyk",
+        "technikum": "true"
+    },
+    "kurier2": {
+        "course": "Magazynier logistyk",
+        "school": "Branżowa Szkoła I Stopnia Nr 1 | ZS2 Korfanty",
+        "link": "https://www.zs2.jastrzebie.pl/kierunki/branzowa-szkola-1-stopnia/magazynier-logistyk",
+        "technikum": "false"
+    },
+    "porty": {
+        "course": "Technik eksploatacji portów i terminali",
+        "school": "Technikum nr 1 | ZS2 Korfanty",
+        "link": "https://www.zs2.jastrzebie.pl/technikum-2/technik-eksploatacji-portow-i-terminali",
+        "technikum": "true"
+    },
+    "informatyk": {
+        "course": "Technik informatyk",
+        "school": "Technikum nr 4 | ZS6 Sobieski",
+        "link": "https://zs6sobieski.pl/rekrutacja/rekrutacja-technikum-nr-4/technikum-nr-4-profile-zawodow/technik-informatyk/",
+        "technikum": "true"
+    },
+    "kolejarz": {
+        "course": "Technik transportu kolejowego",
+        "school": "Technikum nr 5 | ZSZ",
+        "link": "https://zsz.jastrzebie.pl/technikum-nr-5/technik-transportu-kolejowego/",
+        "technikum": "true"
+    },
+    "automatyk_kolejarz": {
+        "course": "Technik automatyk sterowania ruchem kolejowym",
+        "school": "Technikum nr 5 | ZSZ",
+        "link": "https://zsz.jastrzebie.pl/technikum-nr-5/technik-automatyk-sterowania-ruchem-kolei/",
+        "technikum": "true"
+    },
+    "teleinformatyk": {
+        "course": "Technik teleinformatyk",
+        "school": "Technikum nr 5 | ZSZ",
+        "link": "https://zsz.jastrzebie.pl/technikum-nr-5/technik-teleinformatyk/",
+        "technikum": "true"
+    },
+    "mechatronik": {
+        "course": "Technik mechatronik",
+        "school": "Technikum nr 4 | ZS6 Sobieski",
+        "link": "https://zs6sobieski.pl/rekrutacja/rekrutacja-technikum-nr-4/technikum-nr-4-profile-zawodow/technik-mechatronik/",
+        "technikum": "true"
+    },
+    "automatyk": {
+        "course": "Technik automatyk",
+        "school": "Technikum nr 4 | ZS6 Sobieski",
+        "link": "https://zs6sobieski.pl/rekrutacja/rekrutacja-technikum-nr-4/technikum-nr-4-profile-zawodow/technik-automatyk/",
+        "technikum": "true"
+    }
+}
