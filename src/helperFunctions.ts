@@ -1,9 +1,10 @@
 import fs from "fs";
-import { workTypes, types } from "./types"
+import { workTypes } from "./types"
 import path from "path";
 
 const dataPath: string = path.join(__dirname, '..', 'data', "/");
 
+//Czyta plik json
 export async function readJsonFile(fileName: string): Promise<string> {
     let data: string = "";
     data = await fs.promises.readFile(dataPath + fileName, "utf-8");
@@ -12,36 +13,47 @@ export async function readJsonFile(fileName: string): Promise<string> {
 }
 
 export function calculateType(answers: number[]) : string {
-    //Add +1 to every type for every matching answer
-    for (let i = 0; i < workTypes.length; i++) {
-        for (let j = 0; j < workTypes[i].questions.length; j++) {
+    // to jest troche dziwnie napisane ale nie mialem lepszego pomyslu
+    let types = [
+        {type: workTypes[0], matchingAnswers : 0 },
+        {type: workTypes[1], matchingAnswers: 0 },
+        {type: workTypes[2], matchingAnswers: 0 },
+        {type: workTypes[3], matchingAnswers: 0 },
+        {type: workTypes[4], matchingAnswers: 0 },
+        {type: workTypes[5], matchingAnswers: 0 },
+
+    ]
+
+
+    //Zlicza odpowiedzi pasujące do worktypes.questions
+    for (let i = 0; i < types.length; i++) {
+        for (let j = 0; j < types[i].type.questions.length; j++) {
             for (let k = 0; k < answers.length; k++) {
-                if (answers[k] === workTypes[i].questions[j]){
-                    workTypes[i].matchingAnswers += 1;
+                if (answers[k] === types[i].type.questions[j]){
+                    types[i].matchingAnswers += 1;
                 }
             }
         }
     }
     
-    //Get array of values
-    const valArr : number[] = workTypes.map( x => x.matchingAnswers);
+    //array zgadzajacych sie odpowiedzi
+    const valArr : number[] = types.map( x => x.matchingAnswers);
 
-
-    //Find highest value
+    console.log(valArr);
+    //znajduje najwyzsza wartosc
     const highestValue : number = Math.max(...valArr);
+    console.log(highestValue);
+    //Jak jest kilka takich samych to wybrany jest 1 typ w arrayu
 
-    //If there are multiple same answers it will get first one in array
-
-
-    let typeCalculated : types = {} as types;
+    let jsonFileName : string = "";
 
     
-    for(let i = 0; i < workTypes.length; i++){
-        if(highestValue === workTypes[i].matchingAnswers){
-            typeCalculated = workTypes[i];
+    for(let i = 0; i < types.length; i++){
+        if(highestValue === types[i].matchingAnswers){
+            jsonFileName = types[i].type.jsonFileName;
             break;
         }
     }
-
-    return typeCalculated.jsonFileName;
+    console.log(jsonFileName);
+    return jsonFileName;
 }

@@ -1,26 +1,26 @@
-{
-    "ekonomista": {
+[
+    {
         "course": "Technik ekonomista",
         "school": "Technikum nr 1 | ZS2 Korfanty",
         "link": "https://www.zs2.jastrzebie.pl/kierunki/technikum/technik-ekonomista",
         "technikum": "true"
     },
-    "rachunkowosc": {
+    {
         "course": "Technik rachunkowości",
         "school": "Technikum nr 1 | ZS2 Korfanty",
         "link": "https://www.zs2.jastrzebie.pl/technikum-2/technik-rachunkowosci",
         "technikum": "true"
     },
-    "analityk": {
+    {
         "course": "Technik analityk",
         "school": "Technikum nr 4 | ZS6 Sobieski",
         "link": "https://zs6sobieski.pl/rekrutacja/rekrutacja-technikum-nr-4/technikum-nr-4-profile-zawodow/technik-analityk/",
         "technikum": "true"
     },
-    "programista": {
+    {
         "course": "Technik programista",
         "school": "Technikum nr 4 | ZS6 Sobieski",
         "link": "https://zs6sobieski.pl/rekrutacja/rekrutacja-technikum-nr-4/technikum-nr-4-profile-zawodow/technik-programista/",
         "technikum": "true"
     }
-}
+]
