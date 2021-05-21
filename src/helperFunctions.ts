@@ -42,7 +42,6 @@ export function calculateType(answers: number[]) : string {
     console.log(valArr);
     //znajduje najwyzsza wartosc
     const highestValue : number = Math.max(...valArr);
-    console.log(highestValue);
     //Jak jest kilka takich samych to wybrany jest 1 typ w arrayu
 
     let jsonFileName : string = "";
@@ -54,6 +53,5 @@ export function calculateType(answers: number[]) : string {
             break;
         }
     }
-    console.log(jsonFileName);
     return jsonFileName;
 }

@@ -30,13 +30,11 @@ app.get('/questions', async (req: Request, res: Response) => {
 //Dostaje arraya z fronta z odpowiedziami i zwraca plik json z szkołami
 app.post('/answers', async (req: Request, res: Response) => {
         let trueAnswers: number[] = [];
-        console.log(req.body);
         Array.from(req.body).forEach((item: unknown, index: number) => {
             if (item === "tak") {
                 trueAnswers.push(index);
             }
         });
-        console.log(trueAnswers);
         if (trueAnswers.length != 0) {
             const fileName: string = calculateType(trueAnswers);
             const data: string = await readJsonFile(fileName);
