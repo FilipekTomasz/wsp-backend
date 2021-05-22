@@ -1,5 +1,5 @@
 import fs from "fs";
-import { workTypes } from "./types"
+import { types, workTypes } from "./types"
 import path from "path";
 
 const dataPath: string = path.join(__dirname, '..', 'data', "/");
@@ -13,8 +13,8 @@ export async function readJsonFile(fileName: string): Promise<string> {
 }
 
 export function calculateType(answers: number[]) : string {
-    // to jest troche dziwnie napisane ale nie mialem lepszego pomyslu
-    let types = [
+    // to jest troche dziwnie napisane ale nie mialem lepszego pomyslu na przechowywanie ile odpowiedzi sie zgadza do kazdego typu osobowości 
+    let types: {type: types, matchingAnswers: number}[] = [
         {type: workTypes[0], matchingAnswers : 0 },
         {type: workTypes[1], matchingAnswers: 0 },
         {type: workTypes[2], matchingAnswers: 0 },
@@ -23,7 +23,6 @@ export function calculateType(answers: number[]) : string {
         {type: workTypes[5], matchingAnswers: 0 },
 
     ]
-
 
     //Zlicza odpowiedzi pasujące do worktypes.questions
     for (let i = 0; i < types.length; i++) {
@@ -43,7 +42,7 @@ export function calculateType(answers: number[]) : string {
     //znajduje najwyzsza wartosc
     const highestValue : number = Math.max(...valArr);
 
-    //Jak jest kilka takich samych to wybrany jest 1 typ w arrayu
+    //Jak jest kilka takich samych to wybrany jest 1 typ w arrayu workTypes
     let jsonFileName : string = "";
 
     
