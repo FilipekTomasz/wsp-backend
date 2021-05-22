@@ -1,6 +1,7 @@
-import express, { Request, Response } from "express";
+import express, { NextFunction, Request, Response } from "express";
 import { readJsonFile, calculateType } from "./helperFunctions";
 import path from "path";
+import { nextTick } from "process";
 
 const app = express()
 
@@ -21,17 +22,22 @@ app.get('/', (req: Request, res: Response) => {
 
 
 //Czyta plik questions.json i zwraca pytania do testu
-app.get('/questions', async (req: Request, res: Response) => {
-    const data: string = await readJsonFile("questions.json");
-    res.json(data);
+app.get('/questions', async (req: Request, res: Response, next: NextFunction) => {
+    try {
+        const data: string = await readJsonFile("questions.json");
+        res.json(data);
+    } catch (e) {
+        return next(e)
+    }
 })
 
 
 //Dostaje arraya z fronta z odpowiedziami i zwraca plik json z szkołami
-app.post('/answers', async (req: Request, res: Response) => {
-        let trueAnswers: number[] = [];
-        Array.from(req.body).forEach((item: unknown, index: number) => {
-            if (item === "tak") {
+app.post('/answers', async (req: Request, res: Response, next: NextFunction) => {
+    try {
+        let trueAnswers: number[] = []; // Array do ktorego sa dodawane numery pytan na ktore sie odpowiedzialo "tak"
+        Array.from(req.body).forEach((answer: unknown, index: number) => {
+            if (answer === "tak") {
                 trueAnswers.push(index);
             }
         });
@@ -40,10 +46,11 @@ app.post('/answers', async (req: Request, res: Response) => {
             const data: string = await readJsonFile(fileName);
 
             res.json(data);
-        } else {
-            res.json();
         }
-    
+    } catch (e) {
+        return next(e)
+    }
+
 })
 
 

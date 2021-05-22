@@ -6,9 +6,15 @@ const dataPath: string = path.join(__dirname, '..', 'data', "/");
 
 //Czyta plik json
 export async function readJsonFile(fileName: string): Promise<string> {
-    let data: string = "";
-    data = await fs.promises.readFile(dataPath + fileName, "utf-8");
-    return JSON.parse(data);
+    try{
+        let data: string = "";
+        data = await fs.promises.readFile(dataPath + fileName, "utf-8");
+        return JSON.parse(data);
+    } catch(e){
+        console.log(e);
+        return "";
+    }
+
 
 }
 
@@ -24,7 +30,7 @@ export function calculateType(answers: number[]) : string {
 
     ]
 
-    //Zlicza odpowiedzi pasujące do worktypes.questions
+    //Zlicza odpowiedzi pasujące do workTypes.questions
     for (let i = 0; i < types.length; i++) {
         for (let j = 0; j < types[i].type.questions.length; j++) {
             for (let k = 0; k < answers.length; k++) {
@@ -35,10 +41,9 @@ export function calculateType(answers: number[]) : string {
         }
     }
     
-    //array zgadzajacych sie odpowiedzi
+    //array workTypes.matchingAnswers
     const valArr : number[] = types.map( x => x.matchingAnswers);
 
-    console.log(valArr);
     //znajduje najwyzsza wartosc
     const highestValue : number = Math.max(...valArr);
 
