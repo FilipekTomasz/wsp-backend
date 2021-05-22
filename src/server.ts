@@ -20,7 +20,7 @@ app.get('/', (req: Request, res: Response) => {
 })
 
 
-//Czyta plik questions.json i zwraca pytania do tego testu
+//Czyta plik questions.json i zwraca pytania do testu
 app.get('/questions', async (req: Request, res: Response) => {
     const data: string = await readJsonFile("questions.json");
     res.json(data);
@@ -38,7 +38,6 @@ app.post('/answers', async (req: Request, res: Response) => {
         if (trueAnswers.length != 0) {
             const fileName: string = calculateType(trueAnswers);
             const data: string = await readJsonFile(fileName);
-
 
             res.json(data);
         } else {
