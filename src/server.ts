@@ -1,7 +1,6 @@
 import express, { NextFunction, Request, Response } from "express";
 import { readJsonFile, calculateType } from "./helperFunctions";
 import path from "path";
-import { nextTick } from "process";
 
 const app = express()
 
@@ -46,6 +45,8 @@ app.post('/answers', async (req: Request, res: Response, next: NextFunction) => 
             const data: string = await readJsonFile(fileName);
 
             res.json(data);
+        } else {
+            return next("Incorrect data");
         }
     } catch (e) {
         return next(e)
