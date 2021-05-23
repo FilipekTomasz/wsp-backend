@@ -2,7 +2,7 @@ import express, { NextFunction, Request, Response } from "express";
 import { readJsonFile, calculateType } from "./helperFunctions";
 import path from "path";
 
-const app = express()
+const app = express();
 
 const port: string | number = process.env.PORT || 80;
 
@@ -20,36 +20,34 @@ app.get('/', (req: Request, res: Response) => {
 })
 
 
-//Czyta plik questions.json i zwraca pytania do testu
-app.get('/questions', async (req: Request, res: Response, next: NextFunction) => {
+// Reads questions.json file and returns questions to exam
+app.get('/questions', async (req: Request, res: Response, next: NextFunction) =>  {
     try {
-        const data: string = await readJsonFile("questions.json");
+        const data = await readJsonFile("questions.json");
         res.json(data);
     } catch (e) {
-        return next(e)
+        return next(e);
     }
 })
 
 
-//Dostaje arraya z fronta z odpowiedziami i zwraca plik json z szkołami
+//Gets array with answers and returns json with schools
 app.post('/answers', async (req: Request, res: Response, next: NextFunction) => {
     try {
-        let trueAnswers: number[] = []; // Array do ktorego sa dodawane numery pytan na ktore sie odpowiedzialo "tak"
-        Array.from(req.body).forEach((answer: unknown, index: number) => {
-            if (answer === "tak") {
-                trueAnswers.push(index);
-            }
-        });
+         // Array with number of questions where user answered "tak"
+        const trueAnswers : number[] = req.body.map((answer: string, index) => answer === 'tak' ? index : null).filter(one => one !== null); // works but shows error in console
+        
+
         if (trueAnswers.length != 0) {
-            const fileName: string = calculateType(trueAnswers);
-            const data: string = await readJsonFile(fileName);
+            const fileName = calculateType(trueAnswers);
+            const data = await readJsonFile(fileName);
 
             res.json(data);
         } else {
             return next("Incorrect data");
         }
     } catch (e) {
-        return next(e)
+        return next(e);
     }
 
 })

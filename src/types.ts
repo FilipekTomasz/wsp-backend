@@ -1,50 +1,50 @@
-export interface types {
-    questions: number[], // pytania na ktore trzeba odpowiedziec zeby ten tyb wybralo
+export interface Types {
+    questions: number[], // questions user have to answer to get each personality type
     jsonFileName: string
 
 }
 
-const realistyczny: types = {
+const realistic: Types = {
     questions: [9, 11, 26, 30, 50, 51, 57, 6, 12, 37],
-    jsonFileName: "realistyczny.json"
+    jsonFileName: "realistic.json"
 
 }
 
-const badawczy: types = {
+const experimental: Types = {
     questions: [31, 35, 40, 42, 60, 43, 47, 7, 20, 4],
-    jsonFileName: "badawczy.json"
+    jsonFileName: "experimental.json"
 
 }
 
-const spoleczny: types = {
+const social: Types = {
     questions: [15, 1, 10, 46, 59, 49, 23, 32, 34, 52],
-    jsonFileName: "spoleczny.json"
+    jsonFileName: "social.json"
 
 }
 
-const artystyczny: types = {
+const artistic: Types = {
     questions: [36, 22, 25, 41, 44, 3, 5, 14, 16, 19],
-    jsonFileName: "artystyczny.json"
+    jsonFileName: "artistic.json"
 
 }
 
-const przedsiebiorczy: types = {
+const resourceful: Types = {
     questions: [38, 21, 29, 53, 56, 45, 2, 13, 17, 28],
-    jsonFileName: "przedsiebiorczy.json"
+    jsonFileName: "resourceful.json"
 
 }
 
-const konwencjonalny: types = {
+const traditional: Types = {
     questions: [39, 33, 24, 21, 54, 55, 58, 8, 18, 27],
-    jsonFileName: "konwencjonalny.json"
+    jsonFileName: "traditional.json"
 
 }
 
-export const workTypes : types[] = [
-    realistyczny, 
-    badawczy, 
-    spoleczny, 
-    artystyczny, 
-    przedsiebiorczy, 
-    konwencjonalny
+export const workTypes : Types[] = [
+    realistic, 
+    experimental, 
+    social, 
+    artistic, 
+    resourceful, 
+    traditional
 ]
