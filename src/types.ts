@@ -5,46 +5,46 @@ export interface Types {
 }
 
 const realistic: Types = {
-    questions: [9, 11, 26, 30, 50, 51, 57, 6, 12, 37],
+    questions: [5, 26, 27, 31, 35, 36],
     jsonFileName: "realistic.json"
 
 }
 
 const experimental: Types = {
-    questions: [31, 35, 40, 42, 60, 43, 47, 7, 20, 4],
+    questions: [3, 8, 17, 19, 25, 34, 37],
     jsonFileName: "experimental.json"
 
 }
 
 const social: Types = {
-    questions: [15, 1, 10, 46, 59, 49, 23, 32, 34, 52],
+    questions: [6, 10, 12, 15, 22, 30],
     jsonFileName: "social.json"
 
 }
 
 const artistic: Types = {
-    questions: [36, 22, 25, 41, 44, 3, 5, 14, 16, 19],
+    questions: [11, 16, 18, 28, 32, 33],
     jsonFileName: "artistic.json"
 
 }
 
 const resourceful: Types = {
-    questions: [38, 21, 29, 53, 56, 45, 2, 13, 17, 28],
+    questions: [1, 2, 4, 14, 20, 23],
     jsonFileName: "resourceful.json"
 
 }
 
 const traditional: Types = {
-    questions: [39, 33, 24, 21, 54, 55, 58, 8, 18, 27],
+    questions: [7, 9, 13, 21, 24, 29],
     jsonFileName: "traditional.json"
 
 }
 
-export const workTypes : Types[] = [
-    realistic, 
-    experimental, 
-    social, 
-    artistic, 
-    resourceful, 
+export const workTypes: Types[] = [
+    realistic,
+    experimental,
+    social,
+    artistic,
+    resourceful,
     traditional
 ]
