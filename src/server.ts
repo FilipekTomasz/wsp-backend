@@ -35,9 +35,8 @@ app.get('/questions', async (req: Request, res: Response, next: NextFunction) =>
 app.post('/answers', async (req: Request, res: Response, next: NextFunction) => {
     try {
          // Array with number of questions where user answered "tak"
-        const trueAnswers : number[] = req.body.map((answer: string, index) => answer === 'tak' ? index : null).filter(one => one !== null); // works but shows error in console
+        const trueAnswers : number[] = Array.from(req.body.map((answer: string, index) => answer === 'tak' ? index : null).filter(one => one !== null)) as number[];
         
-
         if (trueAnswers.length != 0) {
             const fileName = calculateType(trueAnswers);
             const data = await readJsonFile(fileName);
