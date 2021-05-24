@@ -12,9 +12,9 @@
         "technikum": "false"
     },
     {
-        "course": "Technik eksploatacji portów i terminali",
-        "school": "Technikum nr 1 | ZS2 Korfanty",
-        "link": "https://www.zs2.jastrzebie.pl/technikum-2/technik-eksploatacji-portow-i-terminali",
+        "course": "Technik teleinformatyk",
+        "school": "Technikum nr 5 | ZSZ",
+        "link": "https://zsz.jastrzebie.pl/technikum-nr-5/technik-teleinformatyk/",
         "technikum": "true"
     },
     {
@@ -24,21 +24,15 @@
         "technikum": "true"
     },
     {
+        "course": "Technik eksploatacji portów i terminali",
+        "school": "Technikum nr 1 | ZS2 Korfanty",
+        "link": "https://www.zs2.jastrzebie.pl/technikum-2/technik-eksploatacji-portow-i-terminali",
+        "technikum": "true"
+    },
+    {
         "course": "Technik transportu kolejowego",
         "school": "Technikum nr 5 | ZSZ",
         "link": "https://zsz.jastrzebie.pl/technikum-nr-5/technik-transportu-kolejowego/",
-        "technikum": "true"
-    },
-    {
-        "course": "Technik automatyk sterowania ruchem kolejowym",
-        "school": "Technikum nr 5 | ZSZ",
-        "link": "https://zsz.jastrzebie.pl/technikum-nr-5/technik-automatyk-sterowania-ruchem-kolei/",
-        "technikum": "true"
-    },
-    {
-        "course": "Technik teleinformatyk",
-        "school": "Technikum nr 5 | ZSZ",
-        "link": "https://zsz.jastrzebie.pl/technikum-nr-5/technik-teleinformatyk/",
         "technikum": "true"
     },
     {
@@ -51,6 +45,12 @@
         "course": "Technik automatyk",
         "school": "Technikum nr 4 | ZS6 Sobieski",
         "link": "https://zs6sobieski.pl/rekrutacja/rekrutacja-technikum-nr-4/technikum-nr-4-profile-zawodow/technik-automatyk/",
+        "technikum": "true"
+    },
+    {
+        "course": "Technik automatyk sterowania ruchem kolejowym",
+        "school": "Technikum nr 5 | ZSZ",
+        "link": "https://zsz.jastrzebie.pl/technikum-nr-5/technik-automatyk-sterowania-ruchem-kolei/",
         "technikum": "true"
     }
 ]

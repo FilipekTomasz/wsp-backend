@@ -21,7 +21,7 @@ app.get('/', (req: Request, res: Response) => {
 
 
 // Reads questions.json file and returns questions to exam
-app.get('/questions', async (req: Request, res: Response, next: NextFunction) =>  {
+app.get('/questions', async (req: Request, res: Response, next: NextFunction) => {
     try {
         const data = await readJsonFile("questions.json");
         res.json(data);
@@ -34,17 +34,22 @@ app.get('/questions', async (req: Request, res: Response, next: NextFunction) =>
 //Gets array with answers and returns json with schools
 app.post('/answers', async (req: Request, res: Response, next: NextFunction) => {
     try {
-         // Array with number of questions where user answered "tak"
-        const trueAnswers : number[] = Array.from(req.body.map((answer: string, index) => answer === 'tak' ? index : null).filter(one => one !== null)) as number[];
-        
-        if (trueAnswers.length != 0) {
-            const fileName = calculateType(trueAnswers);
-            const data = await readJsonFile(fileName);
+        // Array with number of questions where user answered "tak"
+        if (Object.entries(req.body).length === 0) {
+            return next("Error, request body is empty"); // idk why it happens
+        }
 
-            res.json(data);
-        } else {
+        const trueAnswers: number[] = Array.from(req.body.map((answer: string, index) => answer === 'tak' ? index : null).filter(one => one !== null)) as number[];
+
+        if (trueAnswers.length == 0) {
             return next("Incorrect data");
         }
+
+        const fileName = calculateType(trueAnswers);
+        const data = await readJsonFile(fileName);
+
+        res.json(data);
+
     } catch (e) {
         return next(e);
     }

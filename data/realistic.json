@@ -1,20 +1,14 @@
 [
     {
-        "course": "Technik mechanik lotniczy",
-        "school": "Technikum nr 1 | ZS2 Korfanty",
-        "link": "http://zs2.jastrzebie.pl/technikum-2/technik-mechanik-lotniczy",
+        "course": "Technik elektryk",
+        "school": "Technikum nr 4 | ZS6 Sobieski",
+        "link": "https://zs6sobieski.pl/rekrutacja/rekrutacja-technikum-nr-4/technikum-nr-4-profile-zawodow/technik-elektryk/",
         "technikum": "true"
     },
     {
         "course": "Technik mechanik",
         "school": "Technikum nr 2 | ZS5 im. Jana Pawła II",
         "link": "http://www.zs5.jastrzebie.pl/",
-        "technikum": "true"
-    },
-    {
-        "course": "Technik elektryk",
-        "school": "Technikum nr 4 | ZS6 Sobieski",
-        "link": "https://zs6sobieski.pl/rekrutacja/rekrutacja-technikum-nr-4/technikum-nr-4-profile-zawodow/technik-elektryk/",
         "technikum": "true"
     },
     {
@@ -30,6 +24,12 @@
         "technikum": "true"
     },
     {
+        "course": "Technik mechanik lotniczy",
+        "school": "Technikum nr 1 | ZS2 Korfanty",
+        "link": "http://zs2.jastrzebie.pl/technikum-2/technik-mechanik-lotniczy",
+        "technikum": "true"
+    },
+    {
         "course": "Technik chłodnictwa i klimatyzacji",
         "school": "Technikum nr 5 | ZSZ",
         "link": "https://zsz.jastrzebie.pl/technikum-nr-5/technik-chlodnictwa-i-klimatyzacji/",
@@ -39,12 +39,6 @@
         "course": "Technik pojazdów samochodowych",
         "school": "Technikum nr 5 | ZSZ",
         "link": "https://zsz.jastrzebie.pl/technikum-nr-5/technik-pojazdow-samochodowych/",
-        "technikum": "true"
-    },
-    {
-        "course": "Technik urządzeń i systemów energetyki odnawialnej",
-        "school": "Technikum nr 5 | ZSZ",
-        "link": "https://zsz.jastrzebie.pl/technikum-nr-5/technik-urzadzen-i-i-systemow-energetyki-odnawialnej/",
         "technikum": "true"
     },
     {
@@ -64,6 +58,12 @@
         "school": "Branżowa Szkoła I Stopnia nr 3 | ZSZ",
         "link": "https://zsz.jastrzebie.pl/szkola-branzowa-i-stopnia/elektromechanik/",
         "technikum": "false"
+    },
+    {
+        "course": "Technik urządzeń i systemów energetyki odnawialnej",
+        "school": "Technikum nr 5 | ZSZ",
+        "link": "https://zsz.jastrzebie.pl/technikum-nr-5/technik-urzadzen-i-i-systemow-energetyki-odnawialnej/",
+        "technikum": "true"
     },
     {
         "course": "Mechanik pojazdów samochodowych",

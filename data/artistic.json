@@ -6,6 +6,12 @@
         "technikum": "true"
     },
     {
+        "course": "Technik fotografii",
+        "school": "Technikum Nr 1 | ZS2 Korfanty",
+        "link": "https://www.zs2.jastrzebie.pl/technikum-2/technik-fotografii-i-multimediow",
+        "technikum": "true"
+    },
+    {
         "course": "Technik architektury krajobrazu",
         "school": "Technikum Nr 1 | ZS2 Korfanty",
         "link": "https://www.zs2.jastrzebie.pl/kierunki/technikum/technik-architektury-krajobrazu",
@@ -15,12 +21,6 @@
         "course": "Technik grafiki i poligrafii cyfrowej",
         "school": "Technikum Nr 1 | ZS2 Korfanty",
         "link": "https://www.zs2.jastrzebie.pl/kierunki/technikum/technik-grafiki-i-poligrafii-cyfrowej",
-        "technikum": "true"
-    },
-    {
-        "course": "Technik fotografii",
-        "school": "Technikum Nr 1 | ZS2 Korfanty",
-        "link": "https://www.zs2.jastrzebie.pl/technikum-2/technik-fotografii-i-multimediow",
         "technikum": "true"
     }
 ]
