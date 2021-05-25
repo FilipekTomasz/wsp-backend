@@ -34,12 +34,14 @@ app.get('/questions', async (req: Request, res: Response, next: NextFunction) =>
 //Gets array with answers and returns json with schools
 app.post('/answers', async (req: Request, res: Response, next: NextFunction) => {
     try {
-        // Array with number of questions where user answered "tak"
+        
+        //Sometimes empty object gets posted
         if (Object.entries(req.body).length === 0) {
-            return next("Error, request body is empty"); // idk why it happens
+            return next("Error, request body is empty"); 
         }
 
-        const trueAnswers: number[] = Array.from(req.body.map((answer: string, index) => answer === 'tak' ? index : null).filter(one => one !== null)) as number[];
+        // Array with number of questions where user answered "tak"
+        const trueAnswers: number[] = req.body.map((answer: string, index) => answer === 'tak' ? index : null).filter(one => one !== null);
 
         if (trueAnswers.length == 0) {
             return next("Incorrect data");
