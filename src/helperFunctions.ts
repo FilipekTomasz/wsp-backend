@@ -1,6 +1,8 @@
 import fs from "fs";
 import { Types, workTypes } from "./types"
 import path from "path";
+import {answersModel} from "./schema";
+import {addData} from "./dbFunctions"
 
 const dataPath: string = path.join(__dirname, '..', 'data', "/");
 
@@ -45,8 +47,18 @@ export function calculateType(answers: number[]) : string {
     for(let i = 0; i < types.length; i++){
         if(highestValue === types[i].matchingAnswers){
             jsonFileName = types[i].type.jsonFileName;
+            prepareDataForDB(valArr, jsonFileName);
             break;
         }
     }
     return jsonFileName;
+}
+
+function prepareDataForDB(answers: number[], fileName: string) : void {
+    const name : string = fileName.replace('.json', '');
+    const data = new answersModel({
+        results: answers,
+        personalityType: name
+    });
+    addData(data);
 }
