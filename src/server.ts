@@ -9,7 +9,7 @@ import { workTypes } from "./types";
 
 const app = express();
 
-const port: string | number = process.env.PORT || 80;
+const port: string | number = process.env.PORT || 8080;
 
 const viewPath: string = path.join(__dirname, '..', 'app', 'views');
 
@@ -50,24 +50,28 @@ app.post('/age', (req: Request, res: Response, next: NextFunction) => {
     res.sendStatus(200);
 })
 
+
+//Returns how many people completed test, and which type they got
 app.get('/typesData', async (req: Request, res: Response, next: NextFunction) => {
     try {
         const modelData: answers[] = await readData(answersModel) as answers[];
-        const data = modelData.map(model => model.personalityType);
+        const typesInDB = modelData.map(model => model.personalityType);
 
-        const types = {
+        const sendData = {
             realistic: 0,
             experimental: 0,
             social: 0,
             artistic: 0,
             resourceful: 0,
-            traditional: 0
+            traditional: 0,
+            completed: typesInDB.length
         };
 
-        for(let i = 0; i < data.length; i++){
-            types[data[i]] += 1;
+        for(let i = 0; i < typesInDB.length; i++){
+            sendData[typesInDB[i]] += 1;
         }
-        res.json(JSON.parse(JSON.stringify(types)));
+
+        res.json(JSON.parse(JSON.stringify(sendData)));
     } catch (e) {
         return next(e)
     }
