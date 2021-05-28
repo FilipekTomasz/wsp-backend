@@ -1,12 +1,12 @@
 
 import { Schema, model } from "mongoose";
 
-interface answers {
+export interface answers {
     results: number[];
     personalityType: string
 }
 
-interface age {
+export interface age {
     age: number;
 }
 

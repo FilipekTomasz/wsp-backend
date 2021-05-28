@@ -1,9 +1,11 @@
 import express, { NextFunction, Request, Response } from "express";
 import { readJsonFile, calculateType } from "./helperFunctions";
 import { connectToDB } from "./dbFunctions";
+import { Model } from "mongoose"
 import path from "path";
-import { ageModel } from "./schema";
-import { addData } from "./dbFunctions"
+import { ageModel, answersModel, answers } from "./schema";
+import { addData, readData } from "./dbFunctions"
+import { workTypes } from "./types";
 
 const app = express();
 
@@ -36,7 +38,6 @@ app.get('/questions', async (req: Request, res: Response, next: NextFunction) =>
 
 //Gets age of user and saves it to db
 app.post('/age', (req: Request, res: Response, next: NextFunction) => {
-
     //Sometimes empty object gets posted
     if (Object.entries(req.body).length === 0) {
         return next("Error, request body is empty");
@@ -47,6 +48,29 @@ app.post('/age', (req: Request, res: Response, next: NextFunction) => {
     addData(age);
 
     res.sendStatus(200);
+})
+
+app.get('/typesData', async (req: Request, res: Response, next: NextFunction) => {
+    try {
+        const modelData: answers[] = await readData(answersModel) as answers[];
+        const data = modelData.map(model => model.personalityType);
+
+        const types = {
+            realistic: 0,
+            experimental: 0,
+            social: 0,
+            artistic: 0,
+            resourceful: 0,
+            traditional: 0
+        };
+
+        for(let i = 0; i < data.length; i++){
+            types[data[i]] += 1;
+        }
+        res.json(JSON.parse(JSON.stringify(types)));
+    } catch (e) {
+        return next(e)
+    }
 })
 
 
