@@ -25,12 +25,12 @@ export function addData(model): void { // model should be of type Model<any> but
     })
 }
 //Reads data of model provided
-export async function readData(model) : Promise<object[]> { // model should be of type Model<any> but it doesnt work
-    let returnData : object[] = [];
-    return await model.find({}, (err,data) =>{
-        if(err){
+export async function readData(model): Promise<object[]> { // model should be of type Model<any> but it doesnt work
+    let returnData: object[] = [];
+    return await model.find({}, (err, data) => {
+        if (err) {
             console.log(`Error occured while reading data: ${err}`)
-        } 
+        }
         return returnData = data;
     })
 }

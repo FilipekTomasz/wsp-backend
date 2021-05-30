@@ -55,7 +55,7 @@ app.post('/age', (req: Request, res: Response, next: NextFunction) => {
 app.get('/typesData', async (req: Request, res: Response, next: NextFunction) => {
     try {
         const modelData: answers[] = await readData(answersModel) as answers[];
-        const typesInDB = modelData.map(model => model.personalityType);
+        const typesInDB : string[] = modelData.map(model => model.personalityType);
 
         const sendData = {
             realistic: 0,
@@ -71,7 +71,7 @@ app.get('/typesData', async (req: Request, res: Response, next: NextFunction) =>
             sendData[typesInDB[i]] += 1;
         }
 
-        res.json(JSON.parse(JSON.stringify(sendData)));
+        res.json(sendData);
     } catch (e) {
         return next(e)
     }
