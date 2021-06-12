@@ -1,11 +1,11 @@
 import mongoose from "mongoose";
 import 'dotenv/config';
 
-const uri: string = `mongodb+srv://${process.env.DBUSER}:${process.env.PASSWORD}@cluster0.jmnmb.mongodb.net/wybor_szkoly?retryWrites=true&w=majority`;
+const uri = `mongodb+srv://${process.env.DBUSER}:${process.env.PASSWORD}@cluster0.jmnmb.mongodb.net/wybor_szkoly?retryWrites=true&w=majority`;
 
 
 //Connects to db
-export function connectToDB(): void {
+export function connectToDB() {
     mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
     mongoose.connection
@@ -17,7 +17,7 @@ export function connectToDB(): void {
 }
 
 //Saves passed model to db
-export function addData(model): void { // model should be of type Model<any> but it doesnt work
+export function addData(model) { // model should be of type Model<any> but it doesnt work
     model.save((err) => {
         if (err) {
             console.log(`Error occured while saving data: ${err}`);

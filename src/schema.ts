@@ -1,25 +1,25 @@
 import { Schema, model } from "mongoose";
 
-export interface answers {
+export interface Answers {
     results: number[];
     personalityType: string
 }
 
-export interface age {
+export interface Age {
     age: number;
 }
 
-const answersSchema = new Schema<answers>({
+const AnswersSchema = new Schema<Answers>({
     results: { type: [Number], required: true },
     personalityType: { type: String, required: true },
 
 })
 
-const ageSchema = new Schema<age>({
+const AgeSchema = new Schema<Age>({
     age: {type: Number, required: true},
 })
 
 
 
-export const answersModel = model<answers>('answers', answersSchema);
-export const ageModel = model<age>('age', ageSchema);
+export const answersModel = model<Answers>('Answers', AnswersSchema);
+export const ageModel = model<Age>('Age', AgeSchema);

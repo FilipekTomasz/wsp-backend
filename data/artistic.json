@@ -22,5 +22,11 @@
         "school": "Technikum Nr 1 | ZS2 Korfanty",
         "link": "https://www.zs2.jastrzebie.pl/kierunki/technikum/technik-grafiki-i-poligrafii-cyfrowej",
         "technikum": "true"
+    },
+    {
+        "course": "Technik reklamy",
+        "school": "Technikum nr 3 | ZSH",
+        "link": "http://zsh.jastrzebie.pl/?p=181",
+        "technikum": "true"
     }
 ]

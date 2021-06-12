@@ -6,9 +6,21 @@
         "technikum": "true"
     },
     {
+        "course": "Technik handlowiec",
+        "school": "Technikum nr 3 | ZSH",
+        "link": "http://zsh.jastrzebie.pl/?p=185",
+        "technikum": "true"
+    },
+    {
         "course": "Technik organizacji turystyki",
         "school": "Technikum nr 1 | ZS2 Korfanty",
         "link": "https://www.zs2.jastrzebie.pl/kierunki/technikum/technik-organizacji-turystyki",
+        "technikum": "true"
+    },
+    {
+        "course": "Technik organizacji turystyki",
+        "school": "Technikum nr 3 | ZSH",
+        "link": "http://zsh.jastrzebie.pl/?p=188",
         "technikum": "true"
     }
 ]
